@@ -56,17 +56,17 @@ wget -q -O /tmp/install.sh https://archives.strangebee.com/scripts/install.sh ; 
 ```
 A warning might pop up 
 
-!["Cortex Installation"](/assets/images/thehive/automated-hive-install-2.png)
+!["Cortex Installation"](../images/thehive/automated-hive-install-2.png)
 ```
 Type **yes**
 ```
 In the installation option displayed, select ``Install Cortex(run neuron locally)``
 
-!["Cortex installation"](/assets/images/cortex/automated-cortex-install-2.png)
+!["Cortex installation"](../images/cortex/automated-cortex-install-2.png)
 
 Allow the automated installation take place.
 
-!["Cortex installation"](/assets/images/cortex/automated-cortex-install3.png)
+!["Cortex installation"](../images/cortex/automated-cortex-install3.png)
 
 Access cortex dashboard using the provided login data
 
