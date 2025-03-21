@@ -1,11 +1,4 @@
----
-layout: post
-title:  "Installing TheHive4 On CentOs"
-author: Snowdiamond
-categories: [ Security Automation]
-image: /assets/images/thehive/hive-logo.png
-tags: [Security Automation]
----
+
 **INSTALLING THEHIVE ON CENTOS**
 
 **THEHIVE**
@@ -49,7 +42,7 @@ Apache Repository Addition for Cassandra
 ```
 Enter the below configuration
 
-!["cassandra"](/assets/images/cassandra/cassandra-1.png)
+!["cassandra"](../images/cassandra/cassandra-1.png)
 
 **POSSIBLE PROBLEM:** gpgkey refusing to work.
 
@@ -93,7 +86,7 @@ rpc_port:9160
  ```
  Enter Configuration
 
- !["elasticsearch"](/assets/images/elasticsearch/elasticsearch-1.png)
+ !["elasticsearch"](../images/elasticsearch/elasticsearch-1.png)
 
  Make Cache
  ```
@@ -139,7 +132,7 @@ Create Thehive Repo
 ```
 Add the below configuration
 
-!["thehive"](/assets/images/thehive/the-hive-manual-install-1.png)
+!["thehive"](../images/thehive/the-hive-manual-install-1.png)
 
 Install Thehive4
 
@@ -162,9 +155,9 @@ Configure Thehive
 ```
 sudo nano /etc/thehive/application.conf
 ```
-!["Thehive configuration"](/assets/images/thehive/the-hive-manual-config-1.png)
+!["Thehive configuration"](../images/thehive/the-hive-manual-config-1.png)
 
-!["Thehive configuration"](/assets/images/thehive/the-hive-manual-config-2.png)
+!["Thehive configuration"](../images/thehive/the-hive-manual-config-2.png)
 
 Enable and Restart thehive
 
