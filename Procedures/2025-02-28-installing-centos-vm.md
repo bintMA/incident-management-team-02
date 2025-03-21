@@ -1,11 +1,4 @@
----
-layout: post
-title:  "Installing CentOS vm on VirtualBox"
-author: Snowdiamond
-categories: [ Security Automation]
-image: /assets/images/centos/centos-7-logo.png
-tags: [Security Automation]
----
+
 **INSTALLING CENTOS ON VIRTUALBOX**
 
 **CENTOS**
@@ -40,24 +33,24 @@ Installation Choice
 ```
 Test this media & Install CentOs 7
 ```
-!["CentOS"](/assets/images/centos/centos-1.png)
+!["CentOS"](../images/centos/centos-1.png)
 
 Choose Language
 
-!["CentOS"](/assets/images/centos/centos-2.png)
+!["CentOS"](../images/centos/centos-2.png)
 
 Start Installation
 
 Before you can start installation, you have to configure every required parts.
 
-!["CentOS"](/assets/images/centos/centos-3.png)
+!["CentOS"](../images/centos/centos-3.png)
 
 Setup Installation Destination
 ```
 - Check "Automatically configure partition" If not already selected 
 - Click "Done"
 ```
-!["CentOS"](/assets/images/centos/centos-4.png)
+!["CentOS"](../images/centos/centos-4.png)
 
 To proceed, click
 
@@ -67,15 +60,15 @@ Start installation
 
 Set the root user password and create a user 
 
-!["CentOS"](/assets/images/centos/centos-5.png)
+!["CentOS"](../images/centos/centos-5.png)
 
 Reboot the vm after installation is complete.
 
-!["CentOS"](/assets/images/centos/centos-6.png)
+!["CentOS"](../images/centos/centos-6.png)
 
 Stop the VM before it completely reloads.
 
-**NOTE:** If you allow the reboot to complete, it will attempt booting from the cd inserted and that might restart the installation process.
+**NOTE:** If you allow the reboot to complete, it will attempt booting from the CD inserted, which might restart the installation process.
 
 **POST INSTALLATION**
 
@@ -84,7 +77,7 @@ Boot Order Change
 Click "Settings"
 Change the boot order as shown below
 ````
-!["CentOS"](/assets/images/centos/centos-7.png)
+!["CentOS"](../images/centos/centos-7.png)
 
 Start the vm.
 **NETWORK CONFIGURATION**
@@ -111,7 +104,7 @@ Dynamic Address Setup
 ```
 sudo nano /etc/sysconfig/network-scripts/ifcfg-enp0s8
 ```
-!["CentOS"](/assets/images/centos/centos-9.png)
+!["CentOS"](../images/centos/centos-9.png)
 
 REPO ADDITION
 
