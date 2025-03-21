@@ -1,11 +1,4 @@
----
-layout: post
-title:  "Installing MISP on Ubuntu22.4"
-author: Snowdiamond
-categories: [ Security Automation]
-image: assets/images/misp/misp-logo.png
-tags: [Security Automation]
----
+
 **INSTALLING MISP ON UBUNTU 22.4**
 
 **MISP**
@@ -38,12 +31,12 @@ cd /opt
 ```
 wget --no-cache -O /tmp/INSTALL.sh https://raw.githubusercontent.com/MISP/MISP/2.4/INSTALL/INSTALL.sh
 ```
-!["MISP"](/assets/images/misp/installation-1.png)
+!["MISP"](../images/misp/installation-1.png)
 Confirm Available Options
 ```
 bash /tmp/INSTALL.sh
 ```
-!["MISP"](/assets/images/misp/installation-2.png)
+!["MISP"](../images/misp/installation-2.png)
 
 INSTALL THE COMPLETE MISP PACKAGE
 
@@ -62,7 +55,7 @@ During the installation, you'll be prompted about the absence of the user "MISP"
 
 Upon completion, if you created the user "misp" you'll be automatically logged in as "misp"
 
-!["MISP"](/assets/images/misp/inatallation-final.png)
+!["MISP"](../images/misp/inatallation-final.png)
 
 Setup user password.
 
