@@ -16,7 +16,7 @@ NOTE: This is an instruction for installing TheHive on CentOS.
 
 **STEPS**
 
-["CentOS VM Installation"](CentOS VM Installation)
+["CentOS VM Installation"](https://github.com/bintMA/incident-management-team-02/blob/main/Procedures/2025-02-21-install-misp-on-ubuntu22.4.md)
 
 JAVA INSTALLATION
 
