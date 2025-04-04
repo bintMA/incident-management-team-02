@@ -75,28 +75,52 @@ This project addresses these gaps by implementing an **incident management platf
 ## 5. VM Setup Instructions
 
 ### **TheHive**
-
+[Please find TheHive Installation here](https://github.com/bintMA/incident-management-team-02/blob/main/Procedures/2025-02-28-installing-thehive-on-centos-7.md)
 
 ### **MISP**
+[Please find MISP Installation here](https://github.com/bintMA/incident-management-team-02/blob/main/Procedures/2025-02-21-install-misp-on-ubuntu22.4.md)
 
 ### **Cortex**
+[Please find Cortex Installation here](https://github.com/bintMA/incident-management-team-02/blob/main/Procedures/2025-02-15-installing-cortex-on-ubuntu22.4.md)
 
 ---
 
 ## 6. Integration Instructions
-### Step 1: TheHive ↔ MISP
+[Please find Integration Instruction here](https://github.com/bintMA/incident-management-team-02/blob/main/Procedures/2025-02-15-integrating-cortex-misp-thehive.md)
 
 ---
 
-## 7. Incident Simulation & Response Workflow
+## 7. Step-by-Step Incident Response Workflow
 
-### **Scenario: Failed Login Attempt Detection**
-To test the SOC platform, we will simulate a **brute-force attack** scenario.
+### **Scenario: Account Takeover via Credential Stuffing**
+A sudden increase in failed login attempts was detected on Catnip Games International’s multiplayer platform. The SIEM flagged repeated failed logins originating from multiple IPs in a short period, indicating a credential-stuffing attack. 
 
-#### **Step 1: Simulate Brute Force Attack**
+#### Incident Detection: 
+Security logs and SIEM alerts trigger an incident case in TheHive. 
+Alerts are automatically enriched using Cortex analysers. 
 
+#### Incident Triage & Categorization: 
+SOC analysts review the alert details and categorize the incident based on severity. 
+MISP checks for related threat intelligence indicators. 
 
+#### Threat Intelligence Correlation: 
+TheHive pulls relevant threat data from MISP. 
+Context is provided to security teams for rapid decision-making. 
 
+#### Incident Containment & Investigation: 
+Automated scripts initiate immediate containment where applicable. 
+SOC team conducts in-depth forensic analysis on affected systems. 
+Compromised accounts are temporarily locked, and users are prompted to reset passwords. 
+
+#### Remediation & Recovery: 
+Mitigation strategies are applied, such as enforcing multi-factor authentication (MFA) and rate-limiting login attempts. 
+Affected accounts are restored after security verification. 
+Monitoring is intensified to detect further malicious activity. 
+
+#### Post-Incident Analysis & Reporting: 
+Analysts document the root cause, response actions, and lessons learned. 
+Reports are shared with stakeholders to refine playbooks and security posture. 
+User security awareness training is reinforced. 
 
 ---
 
@@ -104,9 +128,9 @@ To test the SOC platform, we will simulate a **brute-force attack** scenario.
 
 | Challenge | Resolution |
 |-----------|------------|
-| **Issue #1:** Delay in TheHive-MISP API authentication. | Adjusted API key validation method. |
-| **Issue #2:** Threat intelligence feed latency >5 minutes. | Exploring alternative MISP feeds. |
-| **Issue #3:** Cortex analyzer execution time variability. | Optimizing integration and reducing redundant queries. |
+|  The Hive 5 license key  | Downgraded to TheHive version 4 |
+| Elasticsearch Startup Failures – TheHive relies on Elasticsearch, but the service failed to start due to permission errors and incorrect configurations.  | Adjusted file permissions, modified the Elasticsearch configuration file, and ensured the service was set to start on boot. |
+| Dependency Issues with Cortex Analyzers – Some Cortex analyzers failed to function due to missing Python dependencies.  | Installed required dependencies using both pip2 and pip3, ensuring compatibility.  |
 
 ---
 
