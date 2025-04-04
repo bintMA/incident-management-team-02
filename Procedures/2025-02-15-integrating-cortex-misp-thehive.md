@@ -1,12 +1,5 @@
----
-layout: post
-title:  "Integrating Cortex and MISP with Thehive"
-author: Snowdiamond
-categories: [ Security Automation]
-image: /assets/images/cortex/cortex-logo.jpg
-tags: [Security Automation]
----
-**INTEGRATING CORTEX MISP AND THEHIVE**
+
+**INTEGRATING CORTEX, MISP AND THEHIVE**
 
 **REQUIREMENT**
 - Active theHive VM
@@ -31,14 +24,14 @@ Create an Organization on MISP
 Click "administration"
 Click "add organization"
 ```
-!["organization"](/assets/images/misp/organization-creation-1.png)
+!["organization"](../images/misp/organization-creation-1.png)
 
 ```
 Enter Organization details as desired
 Generate UID
 Click "Submit"
 ```
-!["organization"](/assets/images/misp/organization-creation-2.png)
+!["organization"](../images/misp/organization-creation-2.png)
 
 Add User to Organization
 
@@ -46,7 +39,7 @@ Add User to Organization
 Click on "administration"
 Click "Add user"
 ```
-!["User"](/assets/images/misp/adding-user-to-organization-1.png)
+!["User"](../images/misp/adding-user-to-organization-1.png)
 
 ```
 Enter User details
@@ -61,19 +54,19 @@ Create an Auth Key
 ```
 Click on the view icon at the righthand side of the user
 ```
-!["Auth key"](/assets/images/misp/AuthKey-1.png)
+!["Auth key"](../images/misp/AuthKey-1.png)
 
 ```
 Click on "Auth Keys"
 Click "Add Authentication Key"
 ```
-!["Auth Key"](/assets/images/misp/Authkey-2.png)
+!["Auth Key"](../images/misp/Authkey-2.png)
 
 ```
 Enter details as desired.
 click submit.
 ```
-!["Auth key"](/assets/images/misp/Authkey-3.png)
+!["Auth key"](../images/misp/Authkey-3.png)
 Depending on desired level of restriction, you can add allowed IP addresses and also set a read only token.
 
 NOTE: Setting a read-only will determine if user can only read content on MISP or also post on it.
@@ -82,7 +75,7 @@ NOTE: Setting a read-only will determine if user can only read content on MISP o
 Copy the displayed authkey
 Click "I have noted down my key, take me back now"
 ```
-!["Auth Key"](/assets/images/misp/Authkey-4.png)
+!["Auth Key"](../images/misp/Authkey-4.png)
 
 
 **CORTEX SETUP FOR INTEGRATION**
@@ -91,12 +84,12 @@ Add Organization
 ```
 Click "Add organization"
 ```
-!["Cortex-organization"](/assets/images/cortex/Organization-1.png)
+!["Cortex-organization"](../images/cortex/Organization-1.png)
 
 ```
 Enter Organization details
 ```
-!["Cortex-organization"](/assets/images/cortex/Organization-2.png)
+!["Cortex-organization"](../images/cortex/Organization-2.png)
 
 
 Add User
@@ -104,13 +97,13 @@ Add User
 Click on "users"
 Click "Add users"
 ```
-!["Cortex-user"](/assets/images/cortex/cortex-user-1.png)
+!["Cortex-user"](../images/cortex/cortex-user-1.png)
 
 ```
 Enter the user details as desired
 Click "save user"
 ```
-!["Cortex-user"](/assets/images/cortex/cortex-user-2.png)
+!["Cortex-user"](../images/cortex/cortex-user-2.png)
 
 Create user password
 
@@ -119,18 +112,18 @@ Click "new password"
 Enter password
 press Enter.
 ```
-!["Cortex-user password"](/assets/images/cortex/cortex-user-3.png)
+!["Cortex-user password"](../images/cortex/cortex-user-3.png)
 
 Create API Key
 ```
 Click "Create API Key"
 ```
-!["Cortex-API-Key"](/assets/images/cortex/cortex-user-api.png)
+!["Cortex-API-Key"](../images/cortex/cortex-user-api.png)
 
 ```
 Click "reveal" to see the API Key
 ```
-!["Cortex-API-Key"](/assets/images/cortex/user-api-2.png)
+!["Cortex-API-Key"](..images/cortex/user-api-2.png)
 
 **INTEGRATION ON THEHIVE**
 
@@ -188,4 +181,4 @@ Login to Hive dashboard
 Click on the Username at the top right corner
 Click about
 ```
-!["Integration confirmed"](/assets/images/thehive/integration-confirmation.png)
+!["Integration confirmed"](../images/thehive/integration-confirmation.png)
