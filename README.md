@@ -90,37 +90,82 @@ This project addresses these gaps by implementing an **incident management platf
 
 ---
 
-## 7. Step-by-Step Incident Response Workflow
+## 7. Sample Playbook
 
 ### **Scenario: Account Takeover via Credential Stuffing**
-A sudden increase in failed login attempts was detected on Catnip Games International’s multiplayer platform. The SIEM flagged repeated failed logins originating from multiple IPs in a short period, indicating a credential-stuffing attack. 
+A sudden increase in failed login attempts was detected on Catnip Games International’s multiplayer platform. TheHive flagged repeated failed logins originating from multiple IPs in a short period, indicating a credential-stuffing attack. 
 
-#### Incident Detection: 
-Security logs and SIEM alerts trigger an incident case in TheHive. 
-Alerts are automatically enriched using Cortex analysers. 
+### PREPARATION
 
-#### Incident Triage & Categorization: 
-SOC analysts review the alert details and categorize the incident based on severity. 
-MISP checks for related threat intelligence indicators. 
+- Ensure AntiVirus and TheHive systems are active and centrally monitored.
+- Confirm team access to TheHive, MISP, Cortex, and sandboxing tools.
+- Maintain secure, tested backup procedures.
+- Integrate MISP feeds and regularly update IOCs.
 
-#### Threat Intelligence Correlation: 
-TheHive pulls relevant threat data from MISP. 
-Context is provided to security teams for rapid decision-making. 
+### DETECTION AND ANALYSIS
 
-#### Incident Containment & Investigation: 
-Automated scripts initiate immediate containment where applicable. 
-SOC team conducts in-depth forensic analysis on affected systems. 
-Compromised accounts are temporarily locked, and users are prompted to reset passwords. 
+#### Indicators:
 
-#### Remediation & Recovery: 
-Mitigation strategies are applied, such as enforcing multi-factor authentication (MFA) and rate-limiting login attempts. 
-Affected accounts are restored after security verification. 
-Monitoring is intensified to detect further malicious activity. 
+- Alert from The Hive indicating mass encryption or ransomware activity.
+- Suspicious user reports (e.g., file not opening, system slowness).
+- VirusTotal detection from hash submissions.
 
-#### Post-Incident Analysis & Reporting: 
-Analysts document the root cause, response actions, and lessons learned. 
-Reports are shared with stakeholders to refine playbooks and security posture. 
-User security awareness training is reinforced. 
+#### Initial Triage:
+
+- SOC Analyst creates a case in TheHive using structured templates.
+- Classify the incident severity and identify scope (number of endpoints/users affected).
+
+#### IoC Analysis:
+
+- Use Cortex analysers (e.g., Abuseipdb, VirusTotal) to analyze suspicious files or URLs.
+- Threat indicators submitted to MISP to correlate with known malware campaigns.
+
+#### Artifact Collection:
+
+- Endpoint logs, binaries, process lists, network traffic (PCAPs), and registry data gathered and attached to the case in TheHive.
+
+### CONTAINMENT, ERADICATION, AND RECOVERY
+
+#### Containment:
+
+- IT isolates affected systems (e.g., via EDR network quarantine).
+- User credentials are disabled if compromise is suspected.
+
+#### Eradication:
+
+- Malicious files removed using AntiVirus/EDR.
+- Cortex responders used to automatically contain or disable persistence mechanisms.
+- All artifacts analysed to understand infection vectors and identify backdoors.
+
+#### Recovery:
+
+- Systems are restored from clean backups or rebuilt.
+- Systems patched and monitored for reinfection signs.
+- Affected credentials reset.
+
+### BACKUP EVIDENCE
+
+- Store evidence (logs, files, memory dumps) in secure, time-stamped directories.
+- Ensure metadata and access logs are intact.
+- All response actions documented in TheHive, including timeline, artifacts, tags, and analyst notes.
+
+### POST-INCIDENT ACTIVITY
+
+#### Lessons Learned:
+
+- The malware family or variant that was found.
+- Infection vector and user behaviour involved.
+- The success of automated responders (Cortex).
+- Recommendations to prevent future recurrence.
+
+#### Evaluate:
+
+- If earlier detection was possible.
+- Identify gaps in containment or communication.
+- Consult legal counsel regarding disclosure and reporting.
+- Final incident report detailing detection, response, recovery, and improvements.
+- Update IOC enrichment processes and detection rules in MISP and TheHive.
+- Update playbook.
 
 ---
 
