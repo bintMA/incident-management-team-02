@@ -4,7 +4,7 @@
 ## 1. Project Overview
 
 ### **Objective**
-This project aims to build a prototype **Security Operations Center (SOC) platform** for **Catni Games International** to secure its multiplayer gaming infrastructure. The focus is on **incident management, threat intelligence sharing, and automated response workflows**.
+This project aims to build a prototype **Security Operations Center (SOC) platform** for **Catnip Games International** to secure its multiplayer gaming infrastructure. The focus is on **incident management, threat intelligence sharing, and automated response workflows**.
 
 ### **Context**
 Catnip Games International is preparing for its first major multiplayer game launch. The company's **300 Linux servers across two data centers** handle **sensitive player data, matchmaking services, and game hosting**. Security issues identified during beta testing include:
